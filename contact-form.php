@@ -49,10 +49,10 @@ if ( !class_exists( 'ContactForm' ) ) {
             $content .= '<div class="contact-form">';
             $content .= '<div class="form">';
             $content .= '<h2>CONTACT US</h2>';
-            $content .= '<p type="Name:"><input name="your_name" id="your_name" placeholder="Write your name here.."></input></p>';
-            $content .= '<p type="Email:"><input name="your_email" id="your_email" placeholder="Let us know how to contact you back.."></input></p>';
-            $content .= '<p type="phone:"><input name="phone_number" id="phone_number" placeholder="Let us know how to contact you back.."></input></p>';
-            $content .= '<p type="Message:"><textarea name="your_comments" id="your_comments" placeholder="What would you like to tell us.."></textarea></p>';
+            $content .= '<p type="Name"><input name="your_name" id="your_name" placeholder="Write your name here.."></input></p>';
+            $content .= '<p type="Email"><input name="your_email" id="your_email" placeholder="Let us know how to contact you back.."></input></p>';
+            $content .= '<p type="phone"><input name="phone_number" id="phone_number" placeholder="Let us know how to contact you back.."></input></p>';
+            $content .= '<p type="Message"><textarea name="your_comments" id="your_comments" placeholder="What would you like to tell us.."></textarea></p>';
             $content .= '<button name="contact_submit" id="contact_submit" onclick="submit_contact_form()">Send Message</button>';
             $content .= '<div>';
             $content .= '<span class="fa fa-phone"></span>028 2210 0290';
