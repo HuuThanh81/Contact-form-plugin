@@ -47,12 +47,12 @@ if ( !class_exists( 'ContactForm' ) ) {
             $content .= '<div id="response_div"></div>';
             $content .= '<div class="contact-form">';
             $content .= '<div class="form">';
-            $content .= '<h2>CONTACT US</h2>';
-            $content .= '<p type="Name"><input name="your_name" id="your_name" placeholder="Write your name here.."></input></p>';
-            $content .= '<p type="Email"><input name="your_email" id="your_email" placeholder="Let us know how to contact you back.."></input></p>';
-            $content .= '<p type="phone"><input name="phone_number" id="phone_number" placeholder="Let us know how to contact you back.."></input></p>';
-            $content .= '<p type="Message"><textarea name="your_comments" id="your_comments" placeholder="What would you like to tell us.."></textarea></p>';
-            $content .= '<button name="contact_submit" id="contact_submit" onclick="submit_contact_form()">Send Message</button>';
+            $content .= '<h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>';
+            $content .= '<p type="Họ và tên"><input name="your_name" id="your_name" placeholder="Nhập họ và tên"></input></p>';
+            $content .= '<p type="Email"><input name="your_email" id="your_email" placeholder="Email của bạn"></input></p>';
+            $content .= '<p type="Số điện thoại"><input name="phone_number" id="phone_number" placeholder="Số điện thoại liên hệ"></input></p>';
+            $content .= '<p type="Lời nhắn"><textarea name="your_comments" id="your_comments" placeholder="Lời nhắn của bạn"></textarea></p>';
+            $content .= '<button name="contact_submit" id="contact_submit" onclick="submit_contact_form()">GỬI NGAY</button>';
             $content .= '<div>';
             $content .= '<span class="fa fa-phone"></span>028 2210 0290';
             $content .= '<span class="fa fa-envelope"></span>cskh@eznet.com.vn';
