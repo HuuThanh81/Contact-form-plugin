@@ -6,6 +6,7 @@ function submit_contact_form(){
     fd.append('phone', $("#phone_number").val());
     fd.append('comments', $("#your_comments").val());
     js_submit(fd,submit_contact_form_callback);
+    console.log(fd);
 }
 
 function submit_contact_form_callback(data){
