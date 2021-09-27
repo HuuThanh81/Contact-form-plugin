@@ -44,7 +44,6 @@ if ( !class_exists( 'ContactForm' ) ) {
 
         function contact_form_show(){
             $content = '';
-            $content .= '<style> label{ display:block; padding:5px 0px 4px 5px; font-size:16px;font-weight:600;}form input[type:text]{}</style>';
             $content .= '<div id="response_div"></div>';
             $content .= '<div class="contact-form">';
             $content .= '<div class="form">';

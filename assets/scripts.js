@@ -15,14 +15,10 @@ function submit_contact_form_callback(data){
     if(jdata.success == 1){
         var mess = jdata.message;
         $("#response_div").html(mess) ;
-        $("#response_div").css("background-color","green");
-        $("#response_div").css("color","#ffffff");
         $("#response_div").css("padding","20px");
     }else{
         var mess = 'vui lòng kiểm tra lại';
         $("#response_div").html(mess) ;
-        $("#response_div").css("background-color","green");
-        $("#response_div").css("color","#ffffff");
         $("#response_div").css("padding","20px");
     }
 }
