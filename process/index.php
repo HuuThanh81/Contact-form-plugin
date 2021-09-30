@@ -4,13 +4,8 @@ require_once($path."wp-load.php");
 
 global $wpdb, $post;
 
-if(array_key_exists('submit_scripts_update',$_POST)){
-    $x = sanitize_email( $_POST['sc_email']);
-    $y = sanitize_textarea_field( $_POST['sc_subject']);
-}
-
 if(isset($_POST['ContactSubmit']) && $_POST['ContactSubmit']=="1")
-{   
+{   $create_date = time();
     $name = sanitize_text_field( $_POST['name']);
     $email = sanitize_email( $_POST['email']);
     $phone = sanitize_text_field( $_POST['phone']);
@@ -31,17 +26,17 @@ if(isset($_POST['ContactSubmit']) && $_POST['ContactSubmit']=="1")
     $message .= 'Thank you.';
     wp_mail($to, $subject, $message);
     
-    $insertData = $wpdb -> get_results("INSERT INTO ".$wpdb->prefix."form_submissions (name, email, phone, message) VALUES ('".$name."','".$email."','".$phone."','".$comments."') ");
+    $table_name = $wpdb->prefix . 'form_submissions';
+    $wpdb->insert($table_name, array('id' => NULL, 'name' => $name, 'email' => $email, 'phone' => $phone, 'message' =>$comments, 'create_date' =>$create_date));
 
     $return = [];
     $return ['success'] = 1;
-    $return ['message'] = 'Your information has been received.';
+    $return ['message'] = 'Thông tin đăng ký của bạn đã được tiếp nhận.';
 
     echo json_encode($return);
 
     $time = current_time('mysql');
     $data = array(
-        // 'comment_post_ID' => $post->ID,
         'comment_content' => $message,
         'comment_author_IP' => $_SERVER['REMOTE_ADDR'],
         'comment_date' => $time,
@@ -49,6 +44,4 @@ if(isset($_POST['ContactSubmit']) && $_POST['ContactSubmit']=="1")
     );
     wp_insert_comment($data);
 }
-
-
 ?>

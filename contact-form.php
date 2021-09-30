@@ -44,22 +44,20 @@ if ( !class_exists( 'ContactForm' ) ) {
 
         function contact_form_show(){
             $content = '';
-            $content .= '<div id="response_div"></div>';
             $content .= '<div class="contact-form">';
-            $content .= '<div class="form">';
+            $content .= '<form class="form" action="javascript:void(0);">';
             $content .= '<h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>';
-            $content .= '<p type="Họ và tên"><input name="your_name" id="your_name" placeholder="Nhập họ và tên"></input></p>';
-            $content .= '<p type="Email"><input name="your_email" id="your_email" placeholder="Email của bạn"></input></p>';
-            $content .= '<p type="Số điện thoại"><input name="phone_number" id="phone_number" placeholder="Số điện thoại liên hệ"></input></p>';
-            $content .= '<p type="Lời nhắn"><textarea name="your_comments" id="your_comments" placeholder="Lời nhắn của bạn"></textarea></p>';
-            $content .= '<button name="contact_submit" id="contact_submit" onclick="submit_contact_form()">GỬI NGAY</button>';
+            $content .= '<p type="Họ và tên"><input name="your_name" id="your_name" placeholder="Nhập họ và tên" required></input></p>';
+            $content .= '<p type="Email"><input name="your_email" id="your_email" placeholder="Email của bạn" required></input></p>';
+            $content .= '<p type="Số điện thoại"><input type="number" name="phone_number" id="phone_number" placeholder="Số điện thoại liên hệ" required></input></p>';
+            $content .= '<p type="Lời nhắn"><textarea name="your_comments" id="your_comments" placeholder="Lời nhắn của bạn" required></textarea>';
+            $content .= '<button type="submit" name="contact_submit" id="contact_submit" onclick="Submit()">GỬI NGAY</button>';
             $content .= '<div>';
-            $content .= '<span class="fa fa-phone"></span>028 2210 0290';
-            $content .= '<span class="fa fa-envelope"></span>cskh@eznet.com.vn';
+            $content .= '<span class="fa fa-phone"></span><a href="tel:02822100290">028 2210 0290</a>'; 
+            $content .= '<span class="fa fa-envelope"></span><a href="mailto:cskh@eznet.com.vn">cskh@eznet.com.vn</a>'; 
             $content .= '</div>';
+            $content .= '</form>';
             $content .= '</div>';
-            $content .= '</div>';
-            
             return $content;   
         }
 
@@ -67,13 +65,14 @@ if ( !class_exists( 'ContactForm' ) ) {
             ?>
             <link rel="stylesheet" href="http://localhost/testplugin/wp-content/plugins/contact-form/assets/styles.css">
             <link rel="stylesheet" href="http://localhost/testplugin/wp-content/plugins/contact-form/assets/all.min.css">
+            <script src="https://www.google.com/recaptcha/api.js?render=6LfsYZwcAAAAAPKXoyz-XE1-ikThLTS4tJ1EZw80"></script>
             <?php
         }
 
         function add_script(){
             ?>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-            <script src="http://localhost/testplugin/wp-content/plugins/contact-form/assets/scripts.js"></script>
+            <script src="http://localhost/testplugin/wp-content/plugins/contact-form/assets/scripts.js"></script>	
             <?php
         }
 

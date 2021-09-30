@@ -36,7 +36,9 @@ body{
     font-size: 20px;
     border-bottom:3px solid #78788c}
   
-    .contact-form   input{width:100%;
+    .contact-form   input{
+    font-size: 0.6em;
+    width:100%;
     padding:10px;
     box-sizing:border-box;
     border-radius: 5px;
@@ -62,6 +64,7 @@ body{
       border-radius: 5px;
       font-family:'Be Vietnam Pro',sans-serif;
       font-size: 14px;
+      margin-bottom: 2em;
     }
 
     .contact-form   button{
@@ -98,4 +101,10 @@ body{
   
     .contact-form   span{
       margin:0 5px 0 15px;
+    }
+
+    .contact-form a{
+      font-size: 1em;
+      color: #fff;
+      text-decoration: none;
     }
